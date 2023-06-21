@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import MyComponent from './MyComponent'
 function App() {
+  const numbers = [ 2, 3, 1, 4, 5];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <ul>
+        {numbers.map((num) => (
+          <li key={num}>{num}</li>
+        ))}
+      </ul>
+      <MyComponent/>
     </div>
   );
 }
-
 export default App;
